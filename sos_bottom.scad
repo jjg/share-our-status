@@ -11,7 +11,7 @@ BOARD_HEIGHT = 6.5;
 CELL_DIAMETER = 20;
 CELL_HEIGHT = 3.2;
 
-$fn=100;
+//$fn=100;
 
 difference(){
     // outer shell
@@ -26,7 +26,12 @@ difference(){
     translate([0,0,(CELL_HEIGHT*2)+1]){
         cylinder(r=(BOARD_DIAMETER/2)+TOLERANCE, h=BOARD_HEIGHT + TOLERANCE + 1);
         translate([-4,(CELL_DIAMETER/2),-(CELL_HEIGHT*2)]){
-            cube([8,8,BOARD_HEIGHT + (CELL_HEIGHT*2) + TOLERANCE + 1]);
+            cube([8,8,BOARD_HEIGHT + (CELL_HEIGHT*2) + TOLERANCE]);
         }
+    }
+    
+    // cover cut-out
+    translate([0,0,BOARD_HEIGHT + (CELL_HEIGHT*2) + 1]){
+        #cylinder(r=(SOCKET_DIAMETER-2)/2,h=5);
     }
 }
