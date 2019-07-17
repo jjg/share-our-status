@@ -34,3 +34,15 @@ The single RGB LED on the Gemma M0 is diffused using a laser-engraved piece of c
 ## 07122019
 
 Began this journal.
+
+## 07172019
+
+Lots going on now so I'm not sure how much time we'll have to work on this over the next few weeks, but maybe we can at least get the first iteration of a PoC built.
+
+A first pass at a 3D-printable case has been added to this repository.  It's pretty big, probably too big for even basic testing but after fitting the Gemma M0 into it, I think we can shave a few mm off of it here and there.  I still need to pick-up some cells and add some "minerals" to the battery compartment, but assuming that works as designed the only remaing chassis part to design is the diffuser.
+
+I think the diffuser can be laser cut from 1mm clear acrylic and then engraved to diffuse the LED's light.  I've also read that capacitive touch sensing can work *through* this sort of acrylic so the plan for now is to put the sensor surface on the inside of this piece.  Copper foil tape is recommended here, but we'll see what I can scrounge-up in the time available.
+
+I think the diffuser can be snap-fit into the 3D printed part for now, or even taped.  In the long run something better will need to be implemented to facilitate changing batteries, etc.  I also plan to leave-out the automatic power-up/down feature in this iteration to keep things simple, and becaus this will change a lot down the road.
+
+It's becoming clear that between the power supply requirements (>3vdc) as well as the physical size and cost of the Gemma M0 will probably make it impractical past the PoC phase of the project.  I really like the flexibility a microcontoller provides, but realisticaly the device could probably work just as well using a single cell, two LED's and some kind of IC logic.  That said I'll probably stick to the M0 until we do some testing and determine the best balance of the various variables, and I'm not completely ruling-out using a microcontroller in the final product if I can find one that meets all the requirements better than the M0.
